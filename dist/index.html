@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+# 設定匯率
+exchange_rate = 30.0  # 1 USD = 30 TWD
+
+# 輸入金額和換算方向
+amount = float(input("請輸入金額: "))
+direction = input("請選擇方向 (TWD to USD 或 USD to TWD): ")
+
+# 換算並顯示結果
+if direction == "TWD to USD":
+    result = amount / exchange_rate
+    print(f"{amount} 台幣 等於 {result:.2f} 美金")
+elif direction == "USD to TWD":
+    result = amount * exchange_rate
+    print(f"{amount} 美金 等於 {result:.2f} 台幣")
+else:
+    print("請輸入正確的換算方向")
+<!-- partial -->
+  
+</body>
+</html>
